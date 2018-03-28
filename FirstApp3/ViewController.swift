@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController{
 
+    @IBOutlet weak var button: UIButton!
     @IBOutlet weak var messageLabel: UILabel!
     var lightOn=true
    
@@ -30,11 +31,13 @@ class ViewController: UIViewController{
             self.messageLabel.text = "White"
             messageLabel.textColor = UIColor.white
             view.backgroundColor = UIColor.black
+            self.button.setTitle("Off", for: .normal)
         }else
         {
             self.messageLabel.text="Black"
             messageLabel.textColor = UIColor.black
             view.backgroundColor = UIColor.white
+            self.button.setTitle("On", for: .normal)
         }
         lightOn = !lightOn
     }
