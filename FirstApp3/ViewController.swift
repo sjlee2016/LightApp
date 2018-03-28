@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
     @IBOutlet weak var messageLabel: UILabel!
     var lightOn=true
@@ -28,9 +28,13 @@ class ViewController: UIViewController {
         if(lightOn==true)
         {
             self.messageLabel.text = "White"
+            messageLabel.textColor = UIColor.white
+            view.backgroundColor = UIColor.black
         }else
         {
             self.messageLabel.text="Black"
+            messageLabel.textColor = UIColor.black
+            view.backgroundColor = UIColor.white
         }
         lightOn = !lightOn
     }
