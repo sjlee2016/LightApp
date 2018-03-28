@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
+    @IBOutlet weak var button: UIButton!
     @IBOutlet weak var messageLabel: UILabel!
     
     let messageArray  = ["May the force be with you","Live long and prosper","To infinity and beyond","Space is big. You just won't believe how vastly, hugely, mindbogglinly big it is",10] as [Any]
@@ -33,6 +34,5 @@ class ViewController: UIViewController {
         index = index + 1
         index %= self.messageArray.count
     }
-
 }
 
